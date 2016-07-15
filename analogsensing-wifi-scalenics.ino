@@ -60,7 +60,7 @@ void setup()
   connect();
 }
 
-#define TIME_DELAY 5000  /* msec */
+#define TIME_DELAY 1000  /* msec */
 String topic;
 String postData;  
 char mqtt_topic[64];
@@ -97,9 +97,10 @@ void loop()
     Serial.println(F("  Connect to MQTT server.."));
     mqttClient.publish(mqtt_topic, mqtt_payload);
     Serial.println(F("  Disconnecting MQTT server.."));
-    mqttClient.disconnect();
   } else {
-    Serial.println(F("  Connection to MQTT server failed"));
+    int state = mqttClient.state();
+    Serial.print(F("  Connection to MQTT server failed: "));
+    Serial.println(state);
   }
 }
 
