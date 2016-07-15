@@ -5,7 +5,7 @@ Analog Sensing for ESPr One(ESP-WROOM-02)
 アナログセンシング値をIoTクラウド：[Scalenics](http://scalenics.io/)へグラフ表示することができます。
 
 ## Description
-本スケッチは、ESPr OneのA0に入力されたアナログ値を5秒間隔でセンシングし、
+本スケッチは、ESPr OneのA0に入力されたアナログ値を1秒間隔でセンシングし、
 IoTクラウド：[Scalenics](http://scalenics.io/)へその値をアップロードします。
 
 ＜注:ESPr Oneのスペック＞
