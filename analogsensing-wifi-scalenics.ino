@@ -94,9 +94,8 @@ void loop()
   Serial.println(mqtt_payload);
   
   if (mqttClient.connect(postID, SC_USER, DEVICE_TOKEN)) {
-    Serial.println(F("  Connect to MQTT server.."));
+    Serial.println(F("  Connection to MQTT server succeeded"));
     mqttClient.publish(mqtt_topic, mqtt_payload);
-    Serial.println(F("  Disconnecting MQTT server.."));
   } else {
     int state = mqttClient.state();
     Serial.print(F("  Connection to MQTT server failed: "));
